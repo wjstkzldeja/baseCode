@@ -23,7 +23,10 @@ class MainActivity : AppCompatActivity() {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
+    /** 기본 레이아웃 불러오던 코드 */
 //    setContentView(R.layout.activity_main)
+
+    /** viemodel 로 구현할때 초기 코드 */
     mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main)
     mBinding.lifecycleOwner = this
     mBinding.viewModel = viewModel
