@@ -11,13 +11,15 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import olivestonelab.com.android.basecodetest.R
 import olivestonelab.com.android.basecodetest.databinding.FragmentFirstBinding
+import olivestonelab.com.android.basecodetest.view.getViewModelFactory
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
  */
 class FirstFragment : Fragment() {
   private lateinit var mBinding: FragmentFirstBinding
-  private val viewModel: FirstViewModel by viewModels()
+//  private val viewModel: FirstViewModel by viewModels()
+  private val viewModel by viewModels<FirstViewModel> { getViewModelFactory() }
 
   override fun onCreateView(
     inflater: LayoutInflater, container: ViewGroup?,
